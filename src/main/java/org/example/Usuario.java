@@ -1,3 +1,5 @@
+package org.example;
+
 public class Usuario {
 
 	private Prestamo prestamo;
@@ -10,10 +12,6 @@ public class Usuario {
 		return this.nombre;
 	}
 
-	/**
-	 * 
-	 * @param nombre
-	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -22,10 +20,7 @@ public class Usuario {
 		return this.rut;
 	}
 
-	/**
-	 * 
-	 * @param rut
-	 */
+
 	public void setRut(String rut) {
 		this.rut = rut;
 	}
@@ -34,10 +29,7 @@ public class Usuario {
 		return this.numero;
 	}
 
-	/**
-	 * 
-	 * @param numero
-	 */
+
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
@@ -46,17 +38,16 @@ public class Usuario {
 		return this.telefono;
 	}
 
-	/**
-	 * 
-	 * @param telefono
-	 */
+
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
 
-	public Usuario() {
-		// TODO - implement Usuario.Usuario
-		throw new UnsupportedOperationException();
+	public Usuario(String nombre, String rut, int numero, int telefono) {
+		this.nombre = nombre;
+		this.rut = rut;
+		this.numero = numero;
+		this.telefono = telefono;
 	}
 
 }
