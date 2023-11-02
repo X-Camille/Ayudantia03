@@ -1,36 +1,55 @@
-package org.example;
-
 public class Libro {
+
+    private Prestamo prestamo;
     private String nombre;
     private String autor;
     private String editorial;
 
-    public Libro(String nombre, String autor, String editorial){
-        this.nombre = nombre;
-        this.autor = autor;
-        this.editorial = editorial;
-    }
-    public String getNombre(){
+    public String getNombre() {
         return this.nombre;
     }
 
-    public String getAutor(){
-        return this.autor;
-    }
-
-    public String getEditorial(){
-        return this.editorial;
-    }
-
-    public void setNombre(String nombre){
+    /**
+     *
+     * @param nombre
+     */
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setAutor(String autor){
+    public String getAutor() {
+        return this.autor;
+    }
+
+    /**
+     *
+     * @param autor
+     */
+    public void setAutor(String autor) {
         this.autor = autor;
     }
 
-    public void setEditorial(String editorial){
+    public String getEditorial() {
+        return this.editorial;
+    }
+
+    /**
+     *
+     * @param editorial
+     */
+    public void setEditorial(String editorial) {
         this.editorial = editorial;
     }
+
+    /**
+     *
+     * @param nombre
+     * @param autor
+     * @param editorial
+     */
+    public Libro(String nombre, String autor, String editorial) {
+        // TODO - implement Libro.Libro
+        throw new UnsupportedOperationException();
+    }
+
 }

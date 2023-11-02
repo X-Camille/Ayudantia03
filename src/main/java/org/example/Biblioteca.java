@@ -1,41 +1,49 @@
-package org.example;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Biblioteca {
 
+    private Collection<Libro> libro;
+    private Collection<Usuario> usuario;
+    private Collection<Bibliotecario> bibliotecario;
+    private Collection<Prestamo> prestamos;
     private ArrayList<Libro> libros;
     private String nombreBiblioteca;
     private String direccionBiblioteca;
 
-    public Biblioteca(ArrayList<Libro> libros, String nombreBiblioteca, String direccionBiblioteca){
-        this.libros = libros;
-        this.nombreBiblioteca = nombreBiblioteca;
-        this.direccionBiblioteca = direccionBiblioteca;
+    public void agregarLibro() {
+        // TODO - implement Biblioteca.agregarLibro
+        throw new UnsupportedOperationException();
     }
 
-    public List<Libro> getLibros() {
-        return this.libros;
+    public void buscarLibro() {
+        // TODO - implement Biblioteca.buscarLibro
+        throw new UnsupportedOperationException();
     }
 
-    public String getNombreBiblioteca(){
-        return this.nombreBiblioteca;
+    public void obtenerLibroPorAutor() {
+        // TODO - implement Biblioteca.obtenerLibroPorAutor
+        throw new UnsupportedOperationException();
     }
 
-    public String getDireccionBiblioteca(){
-        return this.direccionBiblioteca;
+    public void libroExiste() {
+        // TODO - implement Biblioteca.libroExiste
+        throw new UnsupportedOperationException();
     }
 
-    public void setLibros(ArrayList<Libro> libros){
-        this.libros = libros;
+    public void generarPrestamo() {
+        // TODO - implement Biblioteca.generarPrestamo
+        throw new UnsupportedOperationException();
     }
 
-    public void setNombreBiblioteca(String nombreBiblioteca){
-        this.nombreBiblioteca = nombreBiblioteca;
+    /**
+     *
+     * @param libros
+     * @param nombreBiblioteca
+     * @param direccionBiblioteca
+     */
+    public Biblioteca(ArrayList<Libro> libros, String nombreBiblioteca, String direccionBiblioteca) {
+        // TODO - implement Biblioteca.Biblioteca
+        throw new UnsupportedOperationException();
     }
 
-    public void setDireccionBiblioteca(String direccionBiblioteca){
-        this.direccionBiblioteca = direccionBiblioteca;
-    }
 }
-
