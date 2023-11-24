@@ -60,7 +60,6 @@ public class Libro {
         this.editorial = editorial;
         generarIsbnAleatorio();
     }
-
     @Override
     public String toString() {
         return "Libro{" +

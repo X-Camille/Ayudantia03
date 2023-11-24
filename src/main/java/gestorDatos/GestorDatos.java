@@ -5,7 +5,6 @@ import org.example.Biblioteca;
 import org.example.Libro;
 
 import java.io.*;
-
 public class GestorDatos {
     public static void leerArchivo(String direccionArchivo) {
         String textoArchivo = "";

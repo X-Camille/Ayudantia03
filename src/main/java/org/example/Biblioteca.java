@@ -12,61 +12,6 @@ public class Biblioteca {
     private String nombreBiblioteca;
     private String direccionBiblioteca;
 
-
-
-
-/*
-
-   public void mostrarOpciones(){
-        System.out.println("Menú:");
-        System.out.println("1. Agregar Libro");
-        System.out.println("2. Buscar libro por nombre");
-        System.out.println("3. Buscar libro por autor");
-        System.out.println("4. Generar préstamo");
-        System.out.println("5. Ver préstamos");
-        System.out.println("6. Salir");
-        System.out.print("Seleccione una opción: ");
-    }
-    public void menu(Biblioteca biblioteca){
-        Libro libro = new Libro("La muerte", "Edgan Poe", "Mariachi");
-        while (true) {
-            biblioteca.mostrarOpciones();
-            Scanner scanner = new Scanner(System.in);
-
-            int opcion = scanner.nextInt();
-            scanner.nextLine();
-
-            switch (opcion) {
-                case 1:
-                    biblioteca.agregarLibro();
-                    break;
-                case 2:
-                    System.out.print("Ingrese el nombre del libro que desea buscar: ");
-                    String titulo = scanner.nextLine();
-                    biblioteca.buscarLibro(titulo);
-                    break;
-                case 3:
-                    System.out.print("Ingrese el nombre del autor del libro que desea buscar: ");
-                    String autor = scanner.nextLine();
-                    biblioteca.obtenerLibrosPorAutor(autor);
-                    break;
-                case 4:
-                    Usuario usuario = biblioteca.generarUsuario();
-                    biblioteca.generarPrestamo(usuario);
-                    break;
-
-                case 5:
-                    GestorDatos.leerArchivo("C:/Users/Lenovo/Desktop/biblioteca.txt");
-                case 6:
-                    System.out.println("Saliendo del programa.");
-                    System.exit(0);
-
-                default:
-                    System.out.println("Opción no válida");
-            }
-        }
-    }*/
-
     public void agregarLibro() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el título del libro: ");

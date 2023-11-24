@@ -8,7 +8,6 @@ import org.example.Libro;
 import java.io.IOException;
 import java.util.Date;
 
-
 public class GestorPDF {
 
     private String[] lineasPdf;
