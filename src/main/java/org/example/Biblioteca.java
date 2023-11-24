@@ -1,10 +1,10 @@
 package org.example;
 
+import gestorDatos.GestorDatos;
+
 import java.util.*;
 
 public class Biblioteca {
-
-    private Collection<Libro> libro;
     private Collection<Usuario> usuario;
     private Collection<Bibliotecario> bibliotecario;
     private Collection<Prestamo> prestamos;
@@ -12,18 +12,23 @@ public class Biblioteca {
     private String nombreBiblioteca;
     private String direccionBiblioteca;
 
-    public void mostrarOpciones(){
+
+
+
+/*
+
+   public void mostrarOpciones(){
         System.out.println("Menú:");
         System.out.println("1. Agregar Libro");
         System.out.println("2. Buscar libro por nombre");
         System.out.println("3. Buscar libro por autor");
         System.out.println("4. Generar préstamo");
-        System.out.println("5. Salir");
+        System.out.println("5. Ver préstamos");
+        System.out.println("6. Salir");
         System.out.print("Seleccione una opción: ");
     }
-
-    public static void main(String[] args) {
-        Biblioteca biblioteca = new Biblioteca("Biblioteca UFRO", "Uruguay");
+    public void menu(Biblioteca biblioteca){
+        Libro libro = new Libro("La muerte", "Edgan Poe", "Mariachi");
         while (true) {
             biblioteca.mostrarOpciones();
             Scanner scanner = new Scanner(System.in);
@@ -51,6 +56,8 @@ public class Biblioteca {
                     break;
 
                 case 5:
+                    GestorDatos.leerArchivo("C:/Users/Lenovo/Desktop/biblioteca.txt");
+                case 6:
                     System.out.println("Saliendo del programa.");
                     System.exit(0);
 
@@ -58,7 +65,7 @@ public class Biblioteca {
                     System.out.println("Opción no válida");
             }
         }
-    }
+    }*/
 
     public void agregarLibro() {
         Scanner scanner = new Scanner(System.in);
@@ -73,6 +80,23 @@ public class Biblioteca {
         System.out.println("Libro " + nombre + " agregado con éxito.");
     }
 
+    public boolean entradaEsValida(String entrada) {
+        if (entrada == null) {
+            return false;
+        }
+        boolean contieneSoloEspacios = entrada.trim().isEmpty();
+        boolean contieneNumeros = contieneNumeros(entrada);
+        return !contieneSoloEspacios && !contieneNumeros;
+    }
+
+    private boolean contieneNumeros(String entrada) {
+        for (char c : entrada.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public Libro buscarLibro(String titulo) {
         for (Libro libro : libros) {
@@ -84,6 +108,10 @@ public class Biblioteca {
             else {System.out.println("Lo sentimos. No hay resultados de búsqueda para ese libro.");}
         }
         return null;
+    }
+
+    public ArrayList<Libro> getLibros(){
+        return libros;
     }
 
     public List<Libro> obtenerLibrosPorAutor(String autor) {
@@ -123,10 +151,9 @@ public class Biblioteca {
     }
 
 
-    public void generarPrestamo(Usuario usuario) {
+    public void generarPrestamo(Usuario usuario, Libro libro, Bibliotecario bibliotecario) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el título del libro prestado: ");
-        Libro libro = libroExiste(scanner.nextLine());
         if (libro != null) {
             Prestamo prestamo = new Prestamo(usuario, libro);
             prestamos.add(prestamo);

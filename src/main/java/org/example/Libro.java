@@ -60,4 +60,14 @@ public class Libro {
         this.editorial = editorial;
         generarIsbnAleatorio();
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "nombre='" + nombre + '\'' +
+                ", autor='" + autor + '\'' +
+                ", editorial='" + editorial + '\'' +
+                ", isbn='" + isbn + '\'' +
+                '}';
+    }
 }
